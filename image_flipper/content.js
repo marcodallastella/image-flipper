@@ -4,7 +4,9 @@ function flipImages() {
     
     const images = document.getElementsByTagName('img');
     for (let img of images) {
-      if (img.alt && img.alt.toLowerCase().includes(data.keyword.toLowerCase())) {
+      const alt = img.alt?.toLowerCase() || '';
+      const title = img.title?.toLowerCase() || '';
+      if (alt.includes(data.keyword.toLowerCase()) || title.includes(data.keyword.toLowerCase())) {
         img.style.transform = 'rotate(180deg)';
       }
     }
