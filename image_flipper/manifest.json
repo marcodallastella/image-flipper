@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Image Flipper",
+  "version": "1.0",
+  "description": "Flips images based on a keyword in alt text",
+  "permissions": ["storage"],
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
